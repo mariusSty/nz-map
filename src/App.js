@@ -12,8 +12,16 @@ class App extends Component {
     };
   }
 
+  handleClick(i) {
+    this.setState({
+      current: i
+    });
+  }
+
   renderTimeline() {
-    return <Timeline value={this.state.steps} />;
+    return (
+      <Timeline value={this.state.steps} onClick={i => this.handleClick(i)} />
+    );
   }
 
   renderSlider() {

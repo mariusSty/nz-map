@@ -5,7 +5,9 @@ class Timeline extends Component {
     const steps = this.props.value.map((steps, i) => {
       return (
         <li key={i}>
-          <button className="step">{i}</button>
+          <button className="step" onClick={() => this.props.onClick(i)}>
+            {i}
+          </button>
         </li>
       );
     });
