@@ -2,11 +2,15 @@ import React, { Component } from "react";
 
 class Timeline extends Component {
   render() {
-    return (
-      <li>
-        <button className="step">{this.props.value}</button>
-      </li>
-    );
+    const steps = this.props.value.map((steps, i) => {
+      return (
+        <li key={i}>
+          <button className="step">{i}</button>
+        </li>
+      );
+    });
+
+    return <ul>{steps}</ul>;
   }
 }
 

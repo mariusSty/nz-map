@@ -7,16 +7,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "Hello"
+      steps: Array(6).fill(null),
+      current: "Hello"
     };
   }
 
   renderTimeline() {
-    return <Timeline value={this.state.value} />;
+    return <Timeline value={this.state.steps} />;
   }
 
   renderSlider() {
-    return <Slider value={this.state.value} />;
+    return <Slider value={this.state.current} />;
   }
 
   render() {
