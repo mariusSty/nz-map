@@ -2,7 +2,13 @@ import React, { Component } from "react";
 
 class Timeline extends Component {
   render() {
-    return <li>Timeline</li>;
+    return (
+      <li>
+        <button className="step" onClick={() => console.log("click")}>
+          {this.props.value}
+        </button>
+      </li>
+    );
   }
 }
 

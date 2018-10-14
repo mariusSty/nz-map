@@ -5,13 +5,14 @@ import "./App.scss";
 
 class App extends Component {
   render() {
+    const i = "Hello";
     return (
       <div className="body">
         <div className="header">
           <h1>Trip to New Zealand</h1>
         </div>
         <div className="timeline">
-          <Timeline />
+          <Timeline value={i} />
         </div>
         <div className="slider">
           <Slider />
