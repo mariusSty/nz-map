@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import Timeline from "./Timeline";
 import Slider from "./Slider";
-import "./App.css";
+import "./App.scss";
 
 class App extends Component {
   render() {
     return (
-      <div class="body">
-        <div class="header">
+      <div className="body">
+        <div className="header">
           <h1>Trip to New Zealand</h1>
         </div>
-        <div class="timeline">
+        <div className="timeline">
           <Timeline />
         </div>
-        <div class="slider">
+        <div className="slider">
           <Slider />
         </div>
       </div>
