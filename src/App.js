@@ -10,11 +10,13 @@ class App extends Component {
       steps: [
         {
           order: 1,
-          name: "First"
+          name: "First",
+          img: ["1/abstract01.jpg", "1/abstract02.jpg", "1/abstract03.jpg"]
         },
         {
           order: 2,
-          name: "Second"
+          name: "Second",
+          img: ["2/abstract04.jpg"]
         }
       ],
       current: null
