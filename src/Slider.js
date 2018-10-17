@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Slider extends Component {
-  render() {
-    return <div>{this.props.current.name}</div>;
-  }
+function Slider(props) {
+  return <div>{props.current.name}</div>;
 }
 
 export default Slider;

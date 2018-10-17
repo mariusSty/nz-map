@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Timeline extends Component {
-  render() {
-    const steps = this.props.value.map((steps, i) => {
-      return (
-        <li key={i}>
-          <button className="step" onClick={() => this.props.onClick(i)}>
-            {steps.name}
-          </button>
-        </li>
-      );
-    });
+function Timeline(props) {
+  const steps = props.value.map((steps, i) => {
+    return (
+      <li key={i}>
+        <button className="step" onClick={() => props.onClick(i)}>
+          {steps.name}
+        </button>
+      </li>
+    );
+  });
 
-    return <ul>{steps}</ul>;
-  }
+  return <ul>{steps}</ul>;
 }
 
 export default Timeline;
