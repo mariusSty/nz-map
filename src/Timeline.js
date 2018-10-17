@@ -6,7 +6,7 @@ class Timeline extends Component {
       return (
         <li key={i}>
           <button className="step" onClick={() => this.props.onClick(i)}>
-            {i}
+            {steps.name}
           </button>
         </li>
       );

@@ -7,15 +7,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      steps: Array(6).fill(null),
-      current: "Hello"
+      steps: [
+        {
+          order: 1,
+          name: "First"
+        },
+        {
+          order: 2,
+          name: "Second"
+        }
+      ],
+      current: null
     };
-  }
-
-  handleClick(i) {
-    this.setState({
-      current: i
-    });
   }
 
   renderTimeline() {
@@ -25,7 +28,11 @@ class App extends Component {
   }
 
   renderSlider() {
-    return <Slider value={this.state.current} />;
+    let current = this.state.current;
+    if (current === null) {
+      current = this.state.steps[0];
+    }
+    return <Slider steps={this.state.steps} current={current} />;
   }
 
   render() {
@@ -38,6 +45,12 @@ class App extends Component {
         <div className="slider">{this.renderSlider()} </div>
       </div>
     );
+  }
+
+  handleClick(i) {
+    this.setState({
+      current: this.state.steps[i]
+    });
   }
 }
 
