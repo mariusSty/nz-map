@@ -13,6 +13,13 @@ function Slider(props) {
     IMAGES.push(image);
   }
 
-  return <Gallery images={IMAGES} />;
+  return (
+    <Gallery
+      images={IMAGES}
+      enableImageSelection={false}
+      backdropClosesModal={true}
+      imageCountSeparator="/"
+    />
+  );
 }
 export default Slider;
