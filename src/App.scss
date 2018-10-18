@@ -21,7 +21,7 @@
   }
 
   .timeline {
-    width: 20%;
+    width: calc(20% - 4px);
     ul {
       padding: 0px;
       text-align: center;
@@ -47,6 +47,7 @@
 
   .slider {
     width: 80%;
+    padding: 2px;
   }
 
   .slider,
