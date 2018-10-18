@@ -11,12 +11,16 @@ class App extends Component {
         {
           order: 1,
           name: "First",
-          img: ["1/abstract01.jpg", "1/abstract02.jpg", "1/abstract03.jpg"]
+          img: [
+            "./img/1/abstract01.jpg",
+            "./img/1/abstract02.jpg",
+            "./img/1/abstract03.jpg"
+          ]
         },
         {
           order: 2,
           name: "Second",
-          img: ["2/abstract04.jpg"]
+          img: ["./img/2/abstract04.jpg"]
         }
       ],
       current: null
