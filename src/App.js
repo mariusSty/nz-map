@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Timeline from "./Timeline";
 import Slider from "./Slider";
+import Map from "./Map";
 import "./App.scss";
 
 class App extends Component {
@@ -41,6 +42,10 @@ class App extends Component {
     return <Slider steps={this.state.steps} current={current} />;
   }
 
+  renderMap() {
+    return <Map />;
+  }
+
   render() {
     return (
       <div className="body">
@@ -48,7 +53,8 @@ class App extends Component {
           <h1>Trip to New Zealand</h1>
         </div>
         <div className="timeline">{this.renderTimeline()}</div>
-        <div className="slider">{this.renderSlider()} </div>
+        {/* <div className="slider">{this.renderSlider()} </div> */}
+        <div className="slider">{this.renderMap()} </div>
       </div>
     );
   }
