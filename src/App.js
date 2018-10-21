@@ -38,16 +38,20 @@ class App extends Component {
     );
   }
 
-  renderSlider() {
-    let current = this.state.current;
-    if (current === null) {
-      current = this.state.steps[0];
-    }
+  renderSlider(current) {
     return <Slider current={current} />;
   }
 
   renderMap() {
     return <Map steps={this.state.steps} />;
+  }
+
+  renderSliderOrMap() {
+    let current = this.state.current;
+    if (current === null) {
+      return this.renderMap();
+    }
+    return this.renderSlider(current);
   }
 
   render() {
@@ -57,8 +61,7 @@ class App extends Component {
           <h1>Trip to New Zealand</h1>
         </div>
         <div className="timeline">{this.renderTimeline()}</div>
-        <div className="slider">{this.renderSlider()} </div>
-        {/* <div className="slider">{this.renderMap()} </div> */}
+        <div className="slider">{this.renderSliderOrMap()} </div>
       </div>
     );
   }
