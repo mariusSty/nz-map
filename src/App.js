@@ -16,12 +16,16 @@ class App extends Component {
             "./img/1/abstract01.jpg",
             "./img/1/abstract02.jpg",
             "./img/1/abstract03.jpg"
-          ]
+          ],
+          longitude: "-36.8484",
+          latitude: "174.7633"
         },
         {
           order: 2,
           name: "Second",
-          img: ["./img/2/abstract04.jpg"]
+          img: ["./img/2/abstract04.jpg"],
+          longitude: "-41.2864",
+          latitude: "174.7762"
         }
       ],
       current: null
@@ -43,7 +47,7 @@ class App extends Component {
   }
 
   renderMap() {
-    return <Map />;
+    return <Map steps={this.state.steps} />;
   }
 
   render() {
