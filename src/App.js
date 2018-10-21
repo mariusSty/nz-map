@@ -43,7 +43,7 @@ class App extends Component {
     if (current === null) {
       current = this.state.steps[0];
     }
-    return <Slider steps={this.state.steps} current={current} />;
+    return <Slider current={current} />;
   }
 
   renderMap() {
@@ -57,8 +57,8 @@ class App extends Component {
           <h1>Trip to New Zealand</h1>
         </div>
         <div className="timeline">{this.renderTimeline()}</div>
-        {/* <div className="slider">{this.renderSlider()} </div> */}
-        <div className="slider">{this.renderMap()} </div>
+        <div className="slider">{this.renderSlider()} </div>
+        {/* <div className="slider">{this.renderMap()} </div> */}
       </div>
     );
   }
