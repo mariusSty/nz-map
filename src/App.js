@@ -67,9 +67,15 @@ class App extends Component {
   }
 
   handleClick(i) {
-    this.setState({
-      current: this.state.steps[i]
-    });
+    if (this.state.current === this.state.steps[i]) {
+      this.setState({
+        current: null
+      });
+    } else {
+      this.setState({
+        current: this.state.steps[i]
+      });
+    }
   }
 }
 
