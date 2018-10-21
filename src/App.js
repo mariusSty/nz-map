@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   renderMap() {
-    return <Map steps={this.state.steps} />;
+    return <Map steps={this.state.steps} onClick={i => this.handleClick(i)} />;
   }
 
   renderSliderOrMap() {

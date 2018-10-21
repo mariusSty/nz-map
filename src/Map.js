@@ -64,6 +64,7 @@ function Map(props) {
               <Marker
                 key={i}
                 marker={{ coordinates: [steps.latitude, steps.longitude] }}
+                onClick={() => props.onClick(i)}
                 style={{
                   default: { fill: "#FF5722" },
                   hover: { fill: "#FFFFFF" },
