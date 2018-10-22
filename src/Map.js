@@ -16,9 +16,7 @@ function Map(props) {
     <div>
       <ComposableMap
         projectionConfig={{
-          scale: 1000,
-          rotation: [0, 0, 0],
-          precision: 0.1
+          scale: 2500
         }}
       >
         <ZoomableGroup center={props.center} disablePanning>

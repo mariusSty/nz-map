@@ -12,6 +12,7 @@ class App extends Component {
         {
           order: 1,
           name: "First",
+          dates: ["15/01/2018", "17/01/2018"],
           img: [
             "./img/1/abstract01.jpg",
             "./img/1/abstract02.jpg",
@@ -23,6 +24,7 @@ class App extends Component {
         {
           order: 2,
           name: "Second",
+          dates: ["18/01/2018"],
           img: ["./img/2/abstract04.jpg"],
           longitude: -41.2864,
           latitude: 174.7762

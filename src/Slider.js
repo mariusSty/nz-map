@@ -12,14 +12,22 @@ function Slider(props) {
     };
     IMAGES.push(image);
   }
-
+  const listDate = props.current.dates.map(date => (
+    <li className="dateSlider">{date}</li>
+  ));
   return (
-    <Gallery
-      images={IMAGES}
-      enableImageSelection={false}
-      backdropClosesModal={true}
-      imageCountSeparator="/"
-    />
+    <div>
+      <div className="topSlider">
+        <span>{props.current.name}</span>
+        <ul>{listDate}</ul>
+      </div>
+      <Gallery
+        images={IMAGES}
+        enableImageSelection={false}
+        backdropClosesModal={true}
+        imageCountSeparator="/"
+      />
+    </div>
   );
 }
 export default Slider;
