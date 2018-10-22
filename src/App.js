@@ -34,7 +34,11 @@ class App extends Component {
 
   renderTimeline() {
     return (
-      <Timeline value={this.state.steps} onClick={i => this.handleClick(i)} />
+      <Timeline
+        value={this.state.steps}
+        current={this.state.current}
+        onClick={i => this.handleClick(i)}
+      />
     );
   }
 
