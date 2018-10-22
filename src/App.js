@@ -17,19 +17,20 @@ class App extends Component {
             "./img/1/abstract02.jpg",
             "./img/1/abstract03.jpg"
           ],
-          longitude: "-36.8484",
-          latitude: "174.7633"
+          longitude: -36.8484,
+          latitude: 174.7633
         },
         {
           order: 2,
           name: "Second",
           img: ["./img/2/abstract04.jpg"],
-          longitude: "-41.2864",
-          latitude: "174.7762"
+          longitude: -41.2864,
+          latitude: 174.7762
         }
       ],
       current: null
     };
+    this.state.center = this.findCenter();
   }
 
   renderTimeline() {
@@ -47,7 +48,13 @@ class App extends Component {
   }
 
   renderMap() {
-    return <Map steps={this.state.steps} onClick={i => this.handleClick(i)} />;
+    return (
+      <Map
+        steps={this.state.steps}
+        center={this.state.center}
+        onClick={i => this.handleClick(i)}
+      />
+    );
   }
 
   renderSliderOrMap() {
@@ -80,6 +87,25 @@ class App extends Component {
         current: this.state.steps[i]
       });
     }
+  }
+
+  findCenter() {
+    const longitude = [];
+    const latitude = [];
+
+    for (let i = 0; i < this.state.steps.length; i++) {
+      longitude.push(this.state.steps[i].longitude);
+      latitude.push(this.state.steps[i].latitude);
+    }
+    const minLatitude = Math.min(...latitude);
+
+    const maxLatitude = Math.max(...latitude);
+    const midLatitude = (minLatitude + maxLatitude) / 2;
+    const minLongitude = Math.min(...longitude);
+    const maxLongitude = Math.max(...longitude);
+    const midLongitude = (minLongitude + maxLongitude) / 2;
+
+    return [midLatitude, midLongitude];
   }
 }
 

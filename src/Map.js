@@ -16,14 +16,12 @@ function Map(props) {
     <div>
       <ComposableMap
         projectionConfig={{
-          scale: 2000,
-          xOffset: -2200,
-          yOffset: -650,
+          scale: 1000,
           rotation: [0, 0, 0],
           precision: 0.1
         }}
       >
-        <ZoomableGroup disablePanning>
+        <ZoomableGroup center={props.center} disablePanning>
           <Geographies geography={worldData}>
             {(geographies, projection) =>
               geographies.map(
