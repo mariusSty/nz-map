@@ -12,14 +12,17 @@ function Slider(props) {
     };
     IMAGES.push(image);
   }
-  const listDate = props.current.dates.map(date => (
-    <li className="dateSlider">{date}</li>
+  const listDate = props.current.dates.map((date, i) => (
+    <li key={i} className="dateSlider">
+      {date}
+    </li>
   ));
   return (
     <div>
       <div className="topSlider">
         <span>{props.current.name}</span>
         <ul>{listDate}</ul>
+        <button onClick={() => props.onClick()}>Retour map</button>
       </div>
       <Gallery
         images={IMAGES}

@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   renderSlider(current) {
-    return <Slider current={current} />;
+    return <Slider current={current} onClick={i => this.handleClick(i)} />;
   }
 
   renderMap() {
@@ -80,7 +80,7 @@ class App extends Component {
   }
 
   handleClick(i) {
-    if (this.state.current === this.state.steps[i]) {
+    if (this.state.current === this.state.steps[i] || i === undefined) {
       this.setState({
         current: null
       });
