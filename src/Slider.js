@@ -8,7 +8,8 @@ function Slider(props) {
       src: props.current.img[i],
       thumbnail: props.current.img[i],
       thumbnailWidth: 320,
-      thumbnailHeight: 212
+      thumbnailHeight: 212,
+      caption: props.current.caption[i]
     };
     IMAGES.push(image);
   }

@@ -18,6 +18,7 @@ class App extends Component {
             "./img/1/abstract02.jpg",
             "./img/1/abstract03.jpg"
           ],
+          caption: ["Test", "Une image lel", "CC cv ?"],
           longitude: -36.8484,
           latitude: 174.7633
         },
@@ -26,6 +27,7 @@ class App extends Component {
           name: "Second",
           dates: ["18/01/2018"],
           img: ["./img/2/abstract04.jpg"],
+          caption: ["Lalala"],
           longitude: -41.2864,
           latitude: 174.7762
         }
