@@ -10,7 +10,7 @@ function Timeline(props) {
     return (
       <li key={i}>
         <Button
-          variant="contained"
+          variant="outlined"
           color="primary"
           className={classNameActive}
           onClick={() => props.onClick(i)}
