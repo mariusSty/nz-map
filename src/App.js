@@ -5,6 +5,9 @@ import Map from "./Map";
 import "./App.scss";
 import Grid from "@material-ui/core/Grid";
 import { Hidden } from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 class App extends Component {
   constructor(props) {
@@ -74,16 +77,20 @@ class App extends Component {
   render() {
     return (
       <div className="body">
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h5" color="inherit">
+              Trip to New Zealand
+            </Typography>
+          </Toolbar>
+        </AppBar>
         <Grid container>
-          <Grid className="header" item xs={12}>
-            <h1>Trip to New Zealand</h1>
-          </Grid>
           <Hidden smDown>
             <Grid className="timeline" item xs={3}>
               {this.renderTimeline()}
             </Grid>
           </Hidden>
-          <Grid item md={9}>
+          <Grid item xs={12} md={9}>
             {this.renderSliderOrMap()}
           </Grid>
         </Grid>

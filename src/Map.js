@@ -16,7 +16,7 @@ function Map(props) {
     <div>
       <ComposableMap
         width={800}
-        height={350}
+        height={400}
         style={{
           width: "100%",
           height: "100%",
