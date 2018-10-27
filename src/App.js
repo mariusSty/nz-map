@@ -10,6 +10,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +43,8 @@ class App extends Component {
           latitude: 174.7762
         }
       ],
-      current: null
+      current: null,
+      left: false
     };
     this.state.center = this.findCenter();
   }
@@ -77,12 +82,31 @@ class App extends Component {
   }
 
   render() {
+    const sideList = (
+      <div className="list">
+        <List>
+          {this.state.steps.map((step, i) => (
+            <ListItem button key={i}>
+              <ListItemText
+                primary={step.name}
+                onClick={() => this.handleClick(i)}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    );
+
     return (
       <div className="body">
         <AppBar position="static">
           <Toolbar>
             <Hidden mdUp>
-              <IconButton color="inherit" aria-label="Menu">
+              <IconButton
+                color="inherit"
+                aria-label="Menu"
+                onClick={this.toggleDrawer("left", true)}
+              >
                 <MenuIcon />
               </IconButton>
             </Hidden>
@@ -101,6 +125,19 @@ class App extends Component {
             {this.renderSliderOrMap()}
           </Grid>
         </Grid>
+        <Drawer
+          open={this.state.left}
+          onClose={this.toggleDrawer("left", false)}
+        >
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer("left", false)}
+            onKeyDown={this.toggleDrawer("left", false)}
+          >
+            {sideList}
+          </div>
+        </Drawer>
       </div>
     );
   }
@@ -135,6 +172,12 @@ class App extends Component {
 
     return [midLatitude, midLongitude];
   }
+
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open
+    });
+  };
 }
 
 export default App;
