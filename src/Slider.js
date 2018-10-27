@@ -1,5 +1,7 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
+import Button from "@material-ui/core/Button";
+import MapIcon from "@material-ui/icons/Map";
 
 function Slider(props) {
   let IMAGES = [];
@@ -21,9 +23,11 @@ function Slider(props) {
   return (
     <div>
       <div className="topSlider">
-        <span>{props.current.name}</span>
+        <h2>{props.current.name}</h2>
         <ul>{listDate}</ul>
-        <button onClick={() => props.onClick()}>Retour map</button>
+        <Button variant="fab" color="primary" onClick={() => props.onClick()}>
+          <MapIcon />
+        </Button>
       </div>
       <Gallery
         images={IMAGES}
