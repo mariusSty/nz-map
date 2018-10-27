@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 function Timeline(props) {
   let isActive;
@@ -8,12 +9,14 @@ function Timeline(props) {
     classNameActive = isActive ? "active" : "";
     return (
       <li key={i}>
-        <button
-          className={"step " + classNameActive}
+        <Button
+          variant="contained"
+          color="primary"
+          className={classNameActive}
           onClick={() => props.onClick(i)}
         >
           {steps.name}
-        </button>
+        </Button>
       </li>
     );
   });

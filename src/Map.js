@@ -15,6 +15,13 @@ function Map(props) {
   return (
     <div>
       <ComposableMap
+        width={800}
+        height={350}
+        style={{
+          width: "100%",
+          height: "100%",
+          overflow: "hidden"
+        }}
         projectionConfig={{
           scale: 2500
         }}

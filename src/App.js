@@ -3,6 +3,8 @@ import Timeline from "./Timeline";
 import Slider from "./Slider";
 import Map from "./Map";
 import "./App.scss";
+import Grid from "@material-ui/core/Grid";
+import { Hidden } from "@material-ui/core";
 
 class App extends Component {
   constructor(props) {
@@ -72,11 +74,19 @@ class App extends Component {
   render() {
     return (
       <div className="body">
-        <div className="header">
-          <h1>Trip to New Zealand</h1>
-        </div>
-        <div className="timeline">{this.renderTimeline()}</div>
-        <div className="slider">{this.renderSliderOrMap()} </div>
+        <Grid container>
+          <Grid className="header" item xs={12}>
+            <h1>Trip to New Zealand</h1>
+          </Grid>
+          <Hidden smDown>
+            <Grid className="timeline" item xs={3}>
+              {this.renderTimeline()}
+            </Grid>
+          </Hidden>
+          <Grid item md={9}>
+            {this.renderSliderOrMap()}
+          </Grid>
+        </Grid>
       </div>
     );
   }
