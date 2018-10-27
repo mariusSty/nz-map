@@ -8,6 +8,8 @@ import { Hidden } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +81,11 @@ class App extends Component {
       <div className="body">
         <AppBar position="static">
           <Toolbar>
+            <Hidden mdUp>
+              <IconButton color="inherit" aria-label="Menu">
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
             <Typography variant="h5" color="inherit">
               Trip to New Zealand
             </Typography>
