@@ -27,14 +27,32 @@
     overflow: auto;
     background-color: #cccccc;
   }
-}
 
-.list {
-  width: 250px;
-}
+  .list {
+    width: 250px;
+  }
 
-.separator {
-  margin-top: 30px;
-  width: 80%;
-  border-color: #ffffff;
+  .separator {
+    margin-top: 30px;
+    width: 80%;
+    border-color: #ffffff;
+  }
+
+  .slider {
+    padding: 10px 20px;
+
+    .date {
+      span,
+      svg {
+        display: inline-flex;
+        vertical-align: middle;
+      }
+      svg {
+        padding-right: 5px;
+      }
+      b {
+        padding: 0 5px;
+      }
+    }
+  }
 }
