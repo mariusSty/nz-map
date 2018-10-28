@@ -81,7 +81,8 @@ function Map(props) {
                   style={{
                     stroke: "#000000",
                     strokeWidth: 2,
-                    opacity: 0.9
+                    opacity: 0.9,
+                    cursor: "pointer"
                   }}
                 />
                 <text
@@ -89,7 +90,9 @@ function Map(props) {
                   y={-15}
                   style={{
                     fontFamily: "Roboto, sans-serif",
-                    fill: "#000000"
+                    fill: "#000000",
+                    cursor: "pointer",
+                    textShadow: "0 1px 2px rgba(0,0,0,0.40)"
                   }}
                 >
                   {steps.name}
