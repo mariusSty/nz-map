@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 function Timeline(props) {
   let isActive;
@@ -11,7 +12,7 @@ function Timeline(props) {
       <li key={i}>
         <Button
           variant="outlined"
-          color="primary"
+          color="secondary"
           className={classNameActive}
           onClick={() => props.onClick(i)}
         >
@@ -21,7 +22,14 @@ function Timeline(props) {
     );
   });
 
-  return <ul>{steps}</ul>;
+  return (
+    <div>
+      <Typography variant="h5" color="secondary">
+        Trip to New Zealand
+      </Typography>
+      <ul>{steps}</ul>
+    </div>
+  );
 }
 
 export default Timeline;

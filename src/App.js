@@ -14,6 +14,14 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: "#000000" },
+    secondary: { main: "#ffffff" }
+  }
+});
 
 class App extends Component {
   constructor(props) {
@@ -83,62 +91,62 @@ class App extends Component {
 
   render() {
     const sideList = (
-      <div className="list">
-        <List>
-          {this.state.steps.map((step, i) => (
-            <ListItem button key={i}>
-              <ListItemText
-                primary={step.name}
-                onClick={() => this.handleClick(i)}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+      <List className="list">
+        {this.state.steps.map((step, i) => (
+          <ListItem button key={i}>
+            <ListItemText
+              primary={step.name}
+              onClick={() => this.handleClick(i)}
+            />
+          </ListItem>
+        ))}
+      </List>
     );
 
     return (
-      <div className="body">
-        <AppBar position="static">
-          <Toolbar>
-            <Hidden mdUp>
-              <IconButton
-                color="inherit"
-                aria-label="Menu"
-                onClick={this.toggleDrawer("left", true)}
-              >
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
-            <Typography variant="h5" color="inherit">
-              Trip to New Zealand
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Grid container>
-          <Hidden smDown>
-            <Grid className="timeline" item xs={3}>
-              {this.renderTimeline()}
-            </Grid>
+      <MuiThemeProvider theme={theme}>
+        <div className="body">
+          <Hidden mdUp>
+            <AppBar position="static">
+              <Toolbar>
+                <IconButton
+                  color="inherit"
+                  aria-label="Menu"
+                  onClick={this.toggleDrawer("left", true)}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h4" color="inherit">
+                  Trip to New Zealand
+                </Typography>
+              </Toolbar>
+            </AppBar>
           </Hidden>
-          <Grid item xs={12} md={9}>
-            {this.renderSliderOrMap()}
+          <Grid container>
+            <Hidden smDown>
+              <Grid className="timeline" item xs={3}>
+                {this.renderTimeline()}
+              </Grid>
+            </Hidden>
+            <Grid item xs={12} md={9}>
+              {this.renderSliderOrMap()}
+            </Grid>
           </Grid>
-        </Grid>
-        <Drawer
-          open={this.state.left}
-          onClose={this.toggleDrawer("left", false)}
-        >
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer("left", false)}
-            onKeyDown={this.toggleDrawer("left", false)}
+          <Drawer
+            open={this.state.left}
+            onClose={this.toggleDrawer("left", false)}
           >
-            {sideList}
-          </div>
-        </Drawer>
-      </div>
+            <div
+              tabIndex={0}
+              role="button"
+              onClick={this.toggleDrawer("left", false)}
+              onKeyDown={this.toggleDrawer("left", false)}
+            >
+              {sideList}
+            </div>
+          </Drawer>
+        </div>
+      </MuiThemeProvider>
     );
   }
 
