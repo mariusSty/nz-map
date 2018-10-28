@@ -39,20 +39,20 @@ function Map(props) {
                       tabable={false}
                       style={{
                         default: {
-                          fill: "#ECEFF1",
-                          stroke: "#607D8B",
+                          fill: "#FFFFFF",
+                          stroke: "#999999",
                           strokeWidth: 0.75,
                           outline: "none"
                         },
                         hover: {
-                          fill: "#ECEFF1",
-                          stroke: "#607D8B",
+                          fill: "#FFFFFF",
+                          stroke: "#999999",
                           strokeWidth: 0.75,
                           outline: "none"
                         },
                         pressed: {
-                          fill: "#ECEFF1",
-                          stroke: "#607D8B",
+                          fill: "#FFFFFF",
+                          stroke: "#999999",
                           strokeWidth: 0.75,
                           outline: "none"
                         }
@@ -69,18 +69,18 @@ function Map(props) {
                 marker={{ coordinates: [steps.latitude, steps.longitude] }}
                 onClick={() => props.onClick(i)}
                 style={{
-                  default: { fill: "#FF5722" },
-                  hover: { fill: "#FFFFFF" },
-                  pressed: { fill: "#FF5722" }
+                  default: { fill: "#ffffff" },
+                  hover: { fill: "#000000" },
+                  pressed: { fill: "#000000" }
                 }}
               >
                 <circle
                   cx={0}
                   cy={0}
-                  r={10}
+                  r={5}
                   style={{
-                    stroke: "#FF5722",
-                    strokeWidth: 3,
+                    stroke: "#000000",
+                    strokeWidth: 2,
                     opacity: 0.9
                   }}
                 />
@@ -89,7 +89,7 @@ function Map(props) {
                   y={-15}
                   style={{
                     fontFamily: "Roboto, sans-serif",
-                    fill: "#000"
+                    fill: "#000000"
                   }}
                 >
                   {steps.name}
