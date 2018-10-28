@@ -13,13 +13,13 @@ const include = ["NZL"];
 
 function Map(props) {
   return (
-    <div>
+    <div className="map">
       <ComposableMap
-        width={800}
+        width={400}
         height={400}
         style={{
-          width: "100%",
-          height: "100%",
+          width: "99%",
+          height: "99%",
           overflow: "hidden"
         }}
         projectionConfig={{
