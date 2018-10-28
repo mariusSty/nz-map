@@ -27,6 +27,7 @@ function Timeline(props) {
       <Typography variant="h5" color="secondary">
         Trip to New Zealand
       </Typography>
+      <hr noshade="true" className="separator" />
       <ul>{steps}</ul>
     </div>
   );
