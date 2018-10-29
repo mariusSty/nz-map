@@ -37,18 +37,20 @@
 
   .slider {
     padding: 10px 20px;
-
-    .date {
-      span,
-      svg {
-        display: inline-flex;
-        vertical-align: middle;
-      }
-      svg {
-        padding-right: 5px;
-      }
-      b {
-        padding: 0 5px;
+    .top-slider {
+      margin-bottom: 10px;
+      .date {
+        span,
+        svg {
+          display: inline-flex;
+          vertical-align: middle;
+        }
+        svg {
+          padding-right: 5px;
+        }
+        b {
+          padding: 0 5px;
+        }
       }
     }
   }

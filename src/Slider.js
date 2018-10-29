@@ -35,7 +35,7 @@ function Slider(props) {
 
   return (
     <div className="slider">
-      <div className="topSlider">
+      <div className="top-slider">
         <h2>{props.current.name}</h2>
         <Grid
           container
