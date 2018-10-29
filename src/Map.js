@@ -23,7 +23,7 @@ function Map(props) {
           overflow: "hidden"
         }}
         projectionConfig={{
-          scale: 2500
+          scale: 7500
         }}
       >
         <ZoomableGroup center={props.center} disablePanning>
