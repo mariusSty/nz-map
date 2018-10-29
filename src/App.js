@@ -313,10 +313,10 @@ class App extends Component {
   }
 
   getImgSize(step, img, imgSrc) {
-    var newImg = new Image();
+    let newImg = new Image();
     newImg.onload = () => {
-      var height = newImg.height;
-      var width = newImg.width;
+      let height = newImg.height;
+      let width = newImg.width;
 
       let dimensions = this.state.steps.slice();
       dimensions[step].imgWidth[img] = width;
@@ -329,8 +329,8 @@ class App extends Component {
   }
 
   getThumbnailSize(step, img, height, width) {
-    var thumbnailHeight = 180;
-    var thumbnailWidth = (thumbnailHeight * width) / height;
+    let thumbnailHeight = 180;
+    let thumbnailWidth = (thumbnailHeight * width) / height;
 
     let dimensionsThumbnail = this.state.steps.slice();
     dimensionsThumbnail[step].thumbnailWidth[img] = thumbnailWidth;
