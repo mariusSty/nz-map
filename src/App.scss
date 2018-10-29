@@ -1,7 +1,6 @@
 .body {
   .timeline {
-    height: 100vh;
-    overflow: auto;
+    min-height: 100vh;
     text-align: center;
     background-color: black;
     padding-top: 30px;
