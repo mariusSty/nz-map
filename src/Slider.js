@@ -12,8 +12,8 @@ function Slider(props) {
     let image = {
       src: props.current.img[i],
       thumbnail: props.current.img[i],
-      thumbnailWidth: 320,
-      thumbnailHeight: 212,
+      thumbnailHeight: props.current.thumbnailHeight[i],
+      thumbnailWidth: props.current.thumbnailWidth[i],
       caption: props.current.caption[i]
     };
     IMAGES.push(image);

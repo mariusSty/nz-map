@@ -48,6 +48,10 @@ class App extends Component {
             "./img/Auckland/IMG_0554.JPG",
             "./img/Auckland/IMG_0555.JPG"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -36.848461,
           latitude: 174.763336
@@ -70,6 +74,10 @@ class App extends Component {
             "./img/Whangarei/IMG_0595.JPG",
             "./img/Whangarei/IMG_0596.jpg"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -35.725113,
           latitude: 174.323715
@@ -86,6 +94,10 @@ class App extends Component {
             "./img/Paihia/IMG_0652.JPG",
             "./img/Paihia/IMG_0654.JPG"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -35.2821,
           latitude: 174.091
@@ -114,6 +126,10 @@ class App extends Component {
             "./img/Kaeo/IMG_0718.JPG",
             "./img/Kaeo/IMG_0720.JPG"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -35.1005,
           latitude: 173.781
@@ -131,6 +147,10 @@ class App extends Component {
             "./img/Ahipara/IMG_0729.JPG",
             "./img/Ahipara/IMG_0735.JPG"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -35.1713,
           latitude: 173.153
@@ -148,6 +168,10 @@ class App extends Component {
             "./img/Cape Reinga/IMG_0749.JPG",
             "./img/Cape Reinga/IMG_0751.JPG"
           ],
+          imgHeight: [],
+          imgWidth: [],
+          thumbnailHeight: [],
+          thumbnailWidth: [],
           caption: [],
           longitude: -34.44176,
           latitude: 172.70085
@@ -157,6 +181,11 @@ class App extends Component {
       left: false
     };
     this.state.center = this.findCenter();
+    for (let i = 0; i < this.state.steps.length; i++) {
+      for (let j = 0; j < this.state.steps[i].img.length; j++) {
+        this.getImgSize(i, j, this.state.steps[i].img[j]);
+      }
+    }
   }
 
   renderTimeline() {
@@ -281,6 +310,32 @@ class App extends Component {
     const midLongitude = (minLongitude + maxLongitude) / 2;
 
     return [midLatitude, midLongitude];
+  }
+
+  getImgSize(step, img, imgSrc) {
+    var newImg = new Image();
+    newImg.onload = () => {
+      var height = newImg.height;
+      var width = newImg.width;
+
+      let dimensions = this.state.steps.slice();
+      dimensions[step].imgWidth[img] = width;
+      dimensions[step].imgHeight[img] = height;
+      this.setState({ steps: dimensions });
+
+      this.getThumbnailSize(step, img, height, width);
+    };
+    newImg.src = imgSrc;
+  }
+
+  getThumbnailSize(step, img, height, width) {
+    var thumbnailHeight = 180;
+    var thumbnailWidth = (thumbnailHeight * width) / height;
+
+    let dimensionsThumbnail = this.state.steps.slice();
+    dimensionsThumbnail[step].thumbnailWidth[img] = thumbnailWidth;
+    dimensionsThumbnail[step].thumbnailHeight[img] = thumbnailHeight;
+    this.setState({ steps: dimensionsThumbnail });
   }
 
   toggleDrawer = (side, open) => () => {
