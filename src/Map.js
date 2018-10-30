@@ -7,9 +7,7 @@ import {
   Markers,
   Marker
 } from "react-simple-maps";
-import worldData from "./world.json";
-
-const include = ["NZL"];
+import worldData from "./world-map.json";
 
 function Map(props) {
   return (
@@ -29,37 +27,34 @@ function Map(props) {
         <ZoomableGroup center={props.center} disablePanning>
           <Geographies geography={worldData}>
             {(geographies, projection) =>
-              geographies.map(
-                (geography, i) =>
-                  include.indexOf(geography.id) !== -1 && (
-                    <Geography
-                      key={i}
-                      geography={geography}
-                      projection={projection}
-                      tabable={false}
-                      style={{
-                        default: {
-                          fill: "#FFFFFF",
-                          stroke: "#999999",
-                          strokeWidth: 0.75,
-                          outline: "none"
-                        },
-                        hover: {
-                          fill: "#FFFFFF",
-                          stroke: "#999999",
-                          strokeWidth: 0.75,
-                          outline: "none"
-                        },
-                        pressed: {
-                          fill: "#FFFFFF",
-                          stroke: "#999999",
-                          strokeWidth: 0.75,
-                          outline: "none"
-                        }
-                      }}
-                    />
-                  )
-              )
+              geographies.map(geography => (
+                <Geography
+                  key={geography.i}
+                  geography={geography}
+                  projection={projection}
+                  tabable={false}
+                  style={{
+                    default: {
+                      fill: "#FFFFFF",
+                      stroke: "#999999",
+                      strokeWidth: 0.75,
+                      outline: "none"
+                    },
+                    hover: {
+                      fill: "#FFFFFF",
+                      stroke: "#999999",
+                      strokeWidth: 0.75,
+                      outline: "none"
+                    },
+                    pressed: {
+                      fill: "#FFFFFF",
+                      stroke: "#999999",
+                      strokeWidth: 0.75,
+                      outline: "none"
+                    }
+                  }}
+                />
+              ))
             }
           </Geographies>
           <Markers>
