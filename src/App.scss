@@ -1,24 +1,13 @@
 .body {
   .timeline {
+    background-color: black;
     min-height: 100vh;
     text-align: center;
-    background-color: black;
     padding-top: 30px;
-    ul {
-      padding: 0;
-      text-align: center;
-      li {
-        list-style-type: none;
-        button {
-          width: 80%;
-          margin-top: 20px;
-          padding: 5px 0px;
-        }
-        .active {
-          font-weight: bold;
-          border: 2px solid #ffffff;
-        }
-      }
+    h5,
+    h6 {
+      font-family: "Lora";
+      font-weight: bold;
     }
   }
 
@@ -29,9 +18,9 @@
   }
 
   .separator {
-    margin-top: 30px;
+    margin-top: 15px;
     width: 80%;
-    border-color: #ffffff;
+    border: 0.5px solid #ffffff;
   }
 
   .slider {
