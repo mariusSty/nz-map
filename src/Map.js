@@ -84,7 +84,7 @@ function Map(props) {
                   textAnchor="middle"
                   y={-15}
                   style={{
-                    fontFamily: "Roboto, sans-serif",
+                    fontSize: "12px",
                     fill: "#000000",
                     cursor: "pointer",
                     textShadow: "0 1px 2px rgba(0,0,0,0.40)"
