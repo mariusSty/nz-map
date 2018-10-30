@@ -27,9 +27,9 @@ function Map(props) {
         <ZoomableGroup center={props.center} disablePanning>
           <Geographies geography={worldData}>
             {(geographies, projection) =>
-              geographies.map(geography => (
+              geographies.map((geography, i) => (
                 <Geography
-                  key={geography.i}
+                  key={i}
                   geography={geography}
                   projection={projection}
                   tabable={false}
