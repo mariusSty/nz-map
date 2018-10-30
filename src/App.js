@@ -14,17 +14,8 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-
-const theme = createMuiTheme({
-  typography: {
-    useNextVariants: true
-  },
-  palette: {
-    primary: { main: "#000000" },
-    secondary: { main: "#ffffff" }
-  }
-});
+import theme from "./theme.js";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 
 class App extends Component {
   constructor(props) {
@@ -222,7 +213,7 @@ class App extends Component {
 
   render() {
     const sideList = (
-      <List className="list">
+      <List>
         {this.state.steps.map((step, i) => (
           <ListItem button key={i}>
             <ListItemText
@@ -247,7 +238,7 @@ class App extends Component {
                 >
                   <MenuIcon />
                 </IconButton>
-                <Typography variant="h4" color="inherit">
+                <Typography variant="h6" color="inherit">
                   Trip to New Zealand
                 </Typography>
               </Toolbar>
