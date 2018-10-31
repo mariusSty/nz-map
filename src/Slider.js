@@ -36,8 +36,8 @@ function Slider(props) {
   return (
     <div className="slider">
       <div className="top-slider">
-        <Typography variant="h5" color="primary">
-          {props.current.order}) {props.current.name}
+        <Typography variant="h6" color="primary">
+          #{props.current.order} {props.current.name}
         </Typography>
         <Grid
           container

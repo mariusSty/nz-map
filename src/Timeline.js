@@ -36,7 +36,7 @@ function Timeline(props) {
           <MapIcon className="title" />
           <b>Trip to New Zealand</b>
         </Typography>
-        <Typography className="description" variant="subtitle2">
+        <Typography className="description" variant="body1">
           Site ayant pour but de répértorier mes photos durant mon voyage en
           Nouvelle-Zélande
         </Typography>
