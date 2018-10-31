@@ -49,17 +49,6 @@ function Slider(props) {
               {listDate}
             </p>
           </Grid>
-          <Hidden mdUp>
-            <Grid item>
-              <Button
-                variant="fab"
-                color="primary"
-                onClick={() => props.onClick()}
-              >
-                <MapIcon />
-              </Button>
-            </Grid>
-          </Hidden>
           <Hidden smDown>
             <Grid item>
               <Button
@@ -72,6 +61,16 @@ function Slider(props) {
             </Grid>
           </Hidden>
         </Grid>
+        <Hidden mdUp>
+          <Button
+            className="button-fixed"
+            variant="fab"
+            color="primary"
+            onClick={() => props.onClick()}
+          >
+            <MapIcon />
+          </Button>
+        </Hidden>
       </div>
       <Gallery
         images={IMAGES}

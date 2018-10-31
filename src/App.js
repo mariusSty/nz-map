@@ -229,24 +229,26 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div className="body">
           <Hidden mdUp>
-            <AppBar position="static">
+            <AppBar position="sticky">
               <Toolbar>
                 <IconButton
-                  color="inherit"
                   aria-label="Menu"
                   onClick={this.toggleDrawer("left", true)}
                 >
                   <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" color="inherit">
-                  Trip to New Zealand
-                </Typography>
+                <Typography variant="h6">Trip to New Zealand</Typography>
               </Toolbar>
             </AppBar>
           </Hidden>
           <Grid container>
             <Hidden smDown>
-              <Grid className="timeline" item xs={3}>
+              <Grid
+                className="timeline"
+                style={{ backgroundColor: theme.palette.primary.main }}
+                item
+                xs={3}
+              >
                 {this.renderTimeline()}
               </Grid>
             </Hidden>
