@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
 import Grid from "@material-ui/core/Grid";
-import { Hidden } from "@material-ui/core";
+import { Hidden, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import CalendarIcon from "@material-ui/icons/CalendarToday";
 import ClearIcon from "@material-ui/icons/Clear";
@@ -36,20 +36,20 @@ function Slider(props) {
   return (
     <div className="slider">
       <div className="top-slider">
-        <h2>
+        <Typography variant="h5" color="primary">
           {props.current.order}) {props.current.name}
-        </h2>
+        </Typography>
         <Grid
           container
           direction="row"
           justify="space-between"
           alignItems="center"
         >
-          <Grid item>
-            <p className="date">
+          <Grid item className="date">
+            <Typography variant="body1" color="primary">
               <CalendarIcon />
               {listDate}
-            </p>
+            </Typography>
           </Grid>
           <Hidden smDown>
             <Grid item>
