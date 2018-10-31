@@ -36,7 +36,9 @@ function Slider(props) {
   return (
     <div className="slider">
       <div className="top-slider">
-        <h2>{props.current.name}</h2>
+        <h2>
+          {props.current.order}) {props.current.name}
+        </h2>
         <Grid
           container
           direction="row"
