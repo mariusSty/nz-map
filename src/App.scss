@@ -2,8 +2,18 @@
   .timeline {
     min-height: 100vh;
     padding-top: 30px;
+    .list {
+      margin: 25px;
+    }
     h5 {
-      margin-left: 24px;
+      margin-left: 39px;
+      margin-right: 25px;
+    }
+    .list-item {
+      border-top: 0.5px solid #333;
+    }
+    .list-item:first-of-type {
+      border: none;
     }
     .active {
       p {
@@ -16,11 +26,6 @@
     height: 100vh;
     overflow: auto;
     background-color: #cccccc;
-  }
-
-  .separator {
-    margin-top: 30px;
-    border: 0.5px solid #ffffff;
   }
 
   .slider {
@@ -48,8 +53,4 @@
       }
     }
   }
-}
-
-.list-item {
-  padding-left: 10px;
 }
