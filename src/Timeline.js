@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import theme from "./theme.js";
 import { MuiThemeProvider } from "@material-ui/core/styles";
+import MapIcon from "@material-ui/icons/Map";
 
 function Timeline(props) {
   let isActive;
@@ -13,12 +14,16 @@ function Timeline(props) {
     isActive = props.value[i] === props.current;
     classNameActive = isActive ? " active" : "";
     return (
-      <ListItem button className={"list-item" + classNameActive} key={i}>
+      <ListItem
+        button
+        className={"list-item" + classNameActive}
+        key={i}
+        onClick={() => props.onClick(i)}
+      >
         <Typography>#{steps.order}</Typography>
         <ListItemText
           disableTypography
           primary={<Typography>{steps.name}</Typography>}
-          onClick={() => props.onClick(i)}
         />
       </ListItem>
     );
@@ -28,7 +33,12 @@ function Timeline(props) {
     <MuiThemeProvider theme={theme}>
       <div>
         <Typography variant="h5">
+          <MapIcon className="title" />
           <b>Trip to New Zealand</b>
+        </Typography>
+        <Typography className="description" variant="subtitle2">
+          Site ayant pour but de répértorier mes photos durant mon voyage en
+          Nouvelle-Zélande
         </Typography>
         <List className="list">{steps}</List>
       </div>
