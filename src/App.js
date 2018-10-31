@@ -361,17 +361,16 @@ class App extends Component {
               </Toolbar>
             </AppBar>
           </Hidden>
-          <Grid container>
-            <Hidden smDown>
-              <Grid
-                className="timeline"
-                style={{ backgroundColor: theme.palette.primary.main }}
-                item
-                xs={3}
-              >
-                {this.renderTimeline()}
-              </Grid>
-            </Hidden>
+          <Hidden smDown>
+            <Grid
+              className="timeline"
+              style={{ backgroundColor: theme.palette.primary.main }}
+              xs={3}
+            >
+              {this.renderTimeline()}
+            </Grid>
+          </Hidden>
+          <Grid container justify="flex-end">
             <Grid item xs={12} md={9}>
               {this.renderSliderOrMap()}
             </Grid>

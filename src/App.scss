@@ -2,12 +2,7 @@
   .timeline {
     min-height: 100vh;
     padding-top: 30px;
-
-    .title {
-      display: inline-flex;
-      vertical-align: middle;
-      margin-right: 5px;
-    }
+    position: fixed;
 
     .description {
       margin: 20px 25px 0px 39px !important;
@@ -76,5 +71,11 @@
         z-index: 1;
       }
     }
+  }
+
+  .title {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 5px;
   }
 }
