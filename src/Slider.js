@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { Hidden } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import CalendarIcon from "@material-ui/icons/CalendarToday";
-import MapIcon from "@material-ui/icons/Map";
+import ClearIcon from "@material-ui/icons/Clear";
 
 function Slider(props) {
   let IMAGES = [];
@@ -56,7 +56,7 @@ function Slider(props) {
                 color="primary"
                 onClick={() => props.onClick()}
               >
-                <MapIcon />
+                <ClearIcon />
               </Button>
             </Grid>
           </Hidden>
@@ -68,7 +68,7 @@ function Slider(props) {
             color="primary"
             onClick={() => props.onClick()}
           >
-            <MapIcon />
+            <ClearIcon />
           </Button>
         </Hidden>
       </div>
