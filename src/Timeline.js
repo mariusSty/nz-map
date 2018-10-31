@@ -27,8 +27,9 @@ function Timeline(props) {
   return (
     <MuiThemeProvider theme={theme}>
       <div>
-        <Typography variant="h5">Trip to New Zealand</Typography>
-        <hr noshade="true" className="separator" />
+        <Typography variant="h5">
+          <b>Trip to New Zealand</b>
+        </Typography>
         <List className="list">{steps}</List>
       </div>
     </MuiThemeProvider>
