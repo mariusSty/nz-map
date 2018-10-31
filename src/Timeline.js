@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -12,27 +11,15 @@ function Timeline(props) {
   let classNameActive;
   const steps = props.value.map((steps, i) => {
     isActive = props.value[i] === props.current;
-    classNameActive = isActive ? "active" : "";
+    classNameActive = isActive ? " active" : "";
     return (
-      <ListItem button key={i}>
-        <Grid
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-        >
-          <Typography color="secondary">#{steps.order}</Typography>
-          <ListItemText
-            disableTypography
-            primary={
-              <Typography type="body2" color="secondary">
-                {steps.name}
-              </Typography>
-            }
-            onClick={() => props.onClick(i)}
-          />
-          <span />
-        </Grid>
+      <ListItem button className={"list-item" + classNameActive} key={i}>
+        <Typography>#{steps.order}</Typography>
+        <ListItemText
+          disableTypography
+          primary={<Typography>{steps.name}</Typography>}
+          onClick={() => props.onClick(i)}
+        />
       </ListItem>
     );
   });
@@ -40,13 +27,9 @@ function Timeline(props) {
   return (
     <MuiThemeProvider theme={theme}>
       <div>
-        <Typography variant="h5" color="secondary">
-          Trip to New Zealand
-        </Typography>
+        <Typography variant="h5">Trip to New Zealand</Typography>
         <hr noshade="true" className="separator" />
-        <List color="primary" className="list">
-          {steps}
-        </List>
+        <List className="list">{steps}</List>
       </div>
     </MuiThemeProvider>
   );
