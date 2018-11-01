@@ -9,6 +9,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-grid-gallery": "^0.5.3",
+    "react-loading-screen": "0.0.17",
     "react-scripts": "2.0.4",
     "react-simple-maps": "^0.12.1"
   },

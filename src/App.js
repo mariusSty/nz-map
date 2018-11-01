@@ -17,6 +17,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import theme from "./theme.js";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import MapIcon from "@material-ui/icons/Map";
+import LoadingScreen from "react-loading-screen";
 
 class App extends Component {
   constructor(props) {
@@ -342,54 +343,65 @@ class App extends Component {
       </List>
     );
 
+    const loading = this.checkImageLoaded();
+
     return (
-      <MuiThemeProvider theme={theme}>
-        <div className="body">
-          <Hidden mdUp>
-            <AppBar position="sticky">
-              <Toolbar>
-                <IconButton
-                  aria-label="Menu"
-                  onClick={this.toggleDrawer("left", true)}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography variant="h6">
-                  <MapIcon className="title" />
-                  Trip to New Zealand
-                </Typography>
-              </Toolbar>
-            </AppBar>
-          </Hidden>
-          <Hidden smDown>
-            <Grid
-              className="timeline"
-              style={{ backgroundColor: theme.palette.primary.main }}
-              xs={3}
-            >
-              {this.renderTimeline()}
+      <LoadingScreen
+        loading={loading}
+        bgColor={theme.palette.primary.main}
+        spinnerColor={theme.palette.primary.contrastText}
+        textColor={theme.palette.primary.contrastText}
+        logoSrc="./loader.gif"
+        text="Patience ! Ça charge, mon p'tit pote :) :) :)"
+      >
+        <MuiThemeProvider theme={theme}>
+          <div className="body">
+            <Hidden mdUp>
+              <AppBar position="sticky">
+                <Toolbar>
+                  <IconButton
+                    aria-label="Menu"
+                    onClick={this.toggleDrawer("left", true)}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Typography variant="h6">
+                    <MapIcon className="title" />
+                    Trip to New Zealand
+                  </Typography>
+                </Toolbar>
+              </AppBar>
+            </Hidden>
+            <Hidden smDown>
+              <Grid
+                className="timeline"
+                style={{ backgroundColor: theme.palette.primary.main }}
+                xs={3}
+              >
+                {this.renderTimeline()}
+              </Grid>
+            </Hidden>
+            <Grid container justify="flex-end">
+              <Grid item xs={12} md={9}>
+                {this.renderSliderOrMap()}
+              </Grid>
             </Grid>
-          </Hidden>
-          <Grid container justify="flex-end">
-            <Grid item xs={12} md={9}>
-              {this.renderSliderOrMap()}
-            </Grid>
-          </Grid>
-          <Drawer
-            open={this.state.left}
-            onClose={this.toggleDrawer("left", false)}
-          >
-            <div
-              tabIndex={0}
-              role="button"
-              onClick={this.toggleDrawer("left", false)}
-              onKeyDown={this.toggleDrawer("left", false)}
+            <Drawer
+              open={this.state.left}
+              onClose={this.toggleDrawer("left", false)}
             >
-              {sideList}
-            </div>
-          </Drawer>
-        </div>
-      </MuiThemeProvider>
+              <div
+                tabIndex={0}
+                role="button"
+                onClick={this.toggleDrawer("left", false)}
+                onKeyDown={this.toggleDrawer("left", false)}
+              >
+                {sideList}
+              </div>
+            </Drawer>
+          </div>
+        </MuiThemeProvider>
+      </LoadingScreen>
     );
   }
 
@@ -448,6 +460,20 @@ class App extends Component {
     dimensionsThumbnail[step].thumbnailWidth[img] = thumbnailWidth;
     dimensionsThumbnail[step].thumbnailHeight[img] = thumbnailHeight;
     this.setState({ steps: dimensionsThumbnail });
+  }
+
+  checkImageLoaded() {
+    let countImage = 0;
+    let countLoad = 0;
+    for (let i = 0; i < this.state.steps.length; i++) {
+      countImage += this.state.steps[i].img.length;
+      countLoad += this.state.steps[i].imgWidth.length;
+    }
+
+    if (countImage === countLoad) {
+      return false;
+    }
+    return true;
   }
 
   toggleDrawer = (side, open) => () => {
