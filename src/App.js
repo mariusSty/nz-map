@@ -18,6 +18,7 @@ import theme from "./theme.js";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import MapIcon from "@material-ui/icons/Map";
 import LoadingScreen from "react-loading-screen";
+import Fade from "@material-ui/core/Fade";
 
 class App extends Component {
   constructor(props) {
@@ -287,7 +288,8 @@ class App extends Component {
         }
       ],
       current: null,
-      left: false
+      left: false,
+      fade: false
     };
     this.state.center = this.findCenter();
     for (let i = 0; i < this.state.steps.length; i++) {
@@ -308,7 +310,18 @@ class App extends Component {
   }
 
   renderSlider(current) {
-    return <Slider current={current} onClick={i => this.handleClick(i)} />;
+    return (
+      <Fade
+        in={true}
+        timeout={{
+          enter: 2000
+        }}
+      >
+        <div>
+          <Slider current={current} onClick={i => this.handleClick(i)} />
+        </div>
+      </Fade>
+    );
   }
 
   renderMap() {
@@ -408,11 +421,13 @@ class App extends Component {
   handleClick(i) {
     if (this.state.current === this.state.steps[i] || i === undefined) {
       this.setState({
-        current: null
+        current: null,
+        fade: false
       });
     } else {
       this.setState({
-        current: this.state.steps[i]
+        current: this.state.steps[i],
+        fade: true
       });
     }
   }
