@@ -10,8 +10,8 @@ import MapIcon from "@material-ui/icons/Map";
 function Timeline(props) {
   let isActive;
   let classNameActive;
-  const steps = props.value.map((steps, i) => {
-    isActive = props.value[i] === props.current;
+  const steps = props.steps.map((steps, i) => {
+    isActive = props.steps[i] === props.current;
     classNameActive = isActive ? " active" : "";
     return (
       <ListItem
