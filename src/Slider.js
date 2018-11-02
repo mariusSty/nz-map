@@ -5,6 +5,7 @@ import { Hidden, Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import CalendarIcon from "@material-ui/icons/CalendarToday";
 import ClearIcon from "@material-ui/icons/Clear";
+import Fade from "@material-ui/core/Fade";
 
 function Slider(props) {
   let IMAGES = [];
@@ -34,53 +35,55 @@ function Slider(props) {
   }
 
   return (
-    <div className="slider">
-      <div className="top-slider">
-        <Typography variant="h6" color="primary">
-          #{props.current.order} {props.current.name}
-        </Typography>
-        <Grid
-          container
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-        >
-          <Grid item className="date">
-            <Typography variant="body1" color="primary">
-              <CalendarIcon />
-              {listDate}
-            </Typography>
-          </Grid>
-          <Hidden smDown>
-            <Grid item>
-              <Button
-                variant="outlined"
-                color="primary"
-                onClick={() => props.onClick()}
-              >
-                <ClearIcon />
-              </Button>
-            </Grid>
-          </Hidden>
-        </Grid>
-        <Hidden mdUp>
-          <Button
-            className="button-fixed"
-            variant="fab"
-            color="primary"
-            onClick={() => props.onClick()}
+    <Fade in={true} timeout={2000}>
+      <div className="slider">
+        <div className="top-slider">
+          <Typography variant="h6" color="primary">
+            #{props.current.order} {props.current.name}
+          </Typography>
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="center"
           >
-            <ClearIcon />
-          </Button>
-        </Hidden>
+            <Grid item className="date">
+              <Typography variant="body1" color="primary">
+                <CalendarIcon />
+                {listDate}
+              </Typography>
+            </Grid>
+            <Hidden smDown>
+              <Grid item>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  onClick={() => props.onClick()}
+                >
+                  <ClearIcon />
+                </Button>
+              </Grid>
+            </Hidden>
+          </Grid>
+          <Hidden mdUp>
+            <Button
+              className="button-fixed"
+              variant="fab"
+              color="primary"
+              onClick={() => props.onClick()}
+            >
+              <ClearIcon />
+            </Button>
+          </Hidden>
+        </div>
+        <Gallery
+          images={IMAGES}
+          enableImageSelection={false}
+          backdropClosesModal={true}
+          imageCountSeparator="/"
+        />
       </div>
-      <Gallery
-        images={IMAGES}
-        enableImageSelection={false}
-        backdropClosesModal={true}
-        imageCountSeparator="/"
-      />
-    </div>
+    </Fade>
   );
 }
 export default Slider;

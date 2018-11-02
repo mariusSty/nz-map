@@ -54,7 +54,13 @@ class App extends Component {
         />
       );
     }
-    return <Slider current={this.state.current} onClick={this.handleClick} />;
+    return (
+      <Slider
+        key={this.state.current.order}
+        current={this.state.current}
+        onClick={this.handleClick}
+      />
+    );
   }
 
   render() {
