@@ -6,7 +6,7 @@ import Slider from "./Slider";
 import Map from "./Map";
 import TopBar from "./TopBar";
 
-import data from "./data.json";
+import datas from "./datas.json";
 import "./App.scss";
 import theme from "./theme.js";
 
@@ -21,16 +21,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: data.title,
-      steps: data.steps,
+      title: datas.title,
+      steps: datas.steps,
       current: null,
-      left: false,
-      center: this.findCenter()
+      left: false
     };
     this.state.center = this.findCenter();
     for (let i = 0; i < this.state.steps.length; i++) {
       for (let j = 0; j < this.state.steps[i].img.length; j++) {
-        this.getImgSize(i, j, this.state.steps[i].img[j]);
+        this.getImgSize(i, j);
       }
     }
   }
@@ -38,7 +37,7 @@ class App extends Component {
   renderTimeline() {
     return (
       <Timeline
-        value={this.state.steps}
+        steps={this.state.steps}
         current={this.state.current}
         onClick={this.handleClick}
       />
@@ -60,7 +59,8 @@ class App extends Component {
 
   render() {
     console.log("render");
-    const loading = this.checkImageLoaded();
+    // const loading = this.checkImageLoaded();
+    const loading = false;
 
     return (
       <LoadingScreen
@@ -141,30 +141,24 @@ class App extends Component {
     return [midLatitude, midLongitude];
   }
 
-  getImgSize(step, img, imgSrc) {
+  getImgSize(step, img) {
     let newImg = new Image();
     newImg.onload = () => {
       let height = newImg.height;
       let width = newImg.width;
+      let thumbnailHeight = 180;
+      let thumbnailWidth = (thumbnailHeight * width) / height;
 
       let dimensions = this.state.steps.slice();
-      dimensions[step].imgWidth[img] = width;
-      dimensions[step].imgHeight[img] = height;
+
+      dimensions[step].img[img].imgWidth = width;
+      dimensions[step].img[img].imgHeight = height;
+      dimensions[step].img[img].thumbnailWidth = thumbnailWidth;
+      dimensions[step].img[img].thumbnailHeight = thumbnailHeight;
+
       this.setState({ steps: dimensions });
-
-      this.getThumbnailSize(step, img, height, width);
     };
-    newImg.src = imgSrc;
-  }
-
-  getThumbnailSize(step, img, height, width) {
-    let thumbnailHeight = 180;
-    let thumbnailWidth = (thumbnailHeight * width) / height;
-
-    let dimensionsThumbnail = this.state.steps.slice();
-    dimensionsThumbnail[step].thumbnailWidth[img] = thumbnailWidth;
-    dimensionsThumbnail[step].thumbnailHeight[img] = thumbnailHeight;
-    this.setState({ steps: dimensionsThumbnail });
+    newImg.src = this.state.steps[step].img[img].src;
   }
 
   checkImageLoaded() {
@@ -172,7 +166,7 @@ class App extends Component {
     let countLoad = 0;
     for (let i = 0; i < this.state.steps.length; i++) {
       countImage += this.state.steps[i].img.length;
-      countLoad += this.state.steps[i].imgWidth.length;
+      countLoad += this.state.steps[i].img.imgWidth.length;
     }
 
     if (countImage === countLoad) {

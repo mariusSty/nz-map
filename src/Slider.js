@@ -10,11 +10,11 @@ function Slider(props) {
   let IMAGES = [];
   for (let i = 0; i < props.current.img.length; i++) {
     let image = {
-      src: props.current.img[i],
-      thumbnail: props.current.img[i],
-      thumbnailHeight: props.current.thumbnailHeight[i],
-      thumbnailWidth: props.current.thumbnailWidth[i],
-      caption: props.current.caption[i]
+      src: props.current.img[i].src,
+      thumbnail: props.current.img[i].src,
+      thumbnailHeight: props.current.img[i].thumbnailHeight,
+      thumbnailWidth: props.current.img[i].thumbnailWidth,
+      caption: props.current.img[i].caption
     };
     IMAGES.push(image);
   }
