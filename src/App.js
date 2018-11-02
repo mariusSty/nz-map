@@ -20,6 +20,7 @@ import LoadingScreen from "react-loading-screen";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.tokens = [];
     this.state = {
       title: datas.title,
       steps: datas.steps,
@@ -28,7 +29,9 @@ class App extends Component {
     };
     this.state.center = this.findCenter();
     for (let i = 0; i < this.state.steps.length; i++) {
+      this.tokens[i] = [];
       for (let j = 0; j < this.state.steps[i].img.length; j++) {
+        this.tokens[i][j] = false;
         this.getImgSize(i, j);
       }
     }
@@ -64,10 +67,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("render");
-    // const loading = this.checkImageLoaded();
-    const loading = false;
-
+    const loading = this.checkImageLoaded();
     return (
       <LoadingScreen
         loading={loading}
@@ -162,23 +162,23 @@ class App extends Component {
       dimensions[step].img[img].thumbnailWidth = thumbnailWidth;
       dimensions[step].img[img].thumbnailHeight = thumbnailHeight;
 
+      this.tokens[step][img] = true;
+
       this.setState({ steps: dimensions });
     };
     newImg.src = this.state.steps[step].img[img].src;
   }
 
   checkImageLoaded() {
-    let countImage = 0;
-    let countLoad = 0;
     for (let i = 0; i < this.state.steps.length; i++) {
-      countImage += this.state.steps[i].img.length;
-      countLoad += this.state.steps[i].img.imgWidth.length;
+      for (let j = 0; j < this.state.steps[i].img.length; j++) {
+        if (this.tokens[i][j] === false) {
+          return true;
+        }
+      }
     }
 
-    if (countImage === countLoad) {
-      return false;
-    }
-    return true;
+    return false;
   }
 
   toggleDrawer = open => () => {
