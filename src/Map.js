@@ -30,6 +30,7 @@ function Map(props) {
               geographies.map((geography, i) => (
                 <Geography
                   key={i}
+                  cacheId={`geography-${i}`}
                   geography={geography}
                   projection={projection}
                   tabable={false}
