@@ -36,6 +36,18 @@
     height: 100vh;
     overflow: auto;
     background-color: #cccccc;
+
+    .marker-text {
+      transition: all 500ms;
+    }
+
+    .marker-text:hover {
+      font-size: 15px !important;
+    }
+
+    .marker-circle:hover + .marker-text {
+      font-size: 15px !important;
+    }
   }
 
   .slider {
@@ -71,6 +83,12 @@
         z-index: 1;
       }
     }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.3);
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .title {
@@ -78,22 +96,4 @@
     vertical-align: middle;
     margin-right: 5px;
   }
-}
-
-.marker-text {
-  transition: all 500ms;
-}
-
-.marker-text:hover {
-  font-size: 15px !important;
-}
-
-.marker-circle:hover + .marker-text {
-  font-size: 15px !important;
-}
-
-.overlay {
-  background: rgba(255, 255, 255, 0.3);
-  height: 100%;
-  width: 100%;
 }
