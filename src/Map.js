@@ -74,6 +74,7 @@ function Map(props) {
                   cx={0}
                   cy={0}
                   r={5}
+                  className="marker-circle"
                   style={{
                     stroke: "#000000",
                     strokeWidth: 2,
@@ -84,6 +85,7 @@ function Map(props) {
                 <text
                   textAnchor="middle"
                   y={-15}
+                  className="marker-text"
                   style={{
                     fontSize: "12px",
                     fill: "#000000",

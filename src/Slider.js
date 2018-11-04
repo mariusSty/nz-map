@@ -15,7 +15,8 @@ function Slider(props) {
       thumbnail: props.current.img[i].src,
       thumbnailHeight: props.current.img[i].thumbnailHeight,
       thumbnailWidth: props.current.img[i].thumbnailWidth,
-      caption: props.current.img[i].caption
+      caption: props.current.img[i].caption,
+      customOverlay: <div className="overlay" />
     };
     IMAGES.push(image);
   }
