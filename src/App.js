@@ -23,6 +23,7 @@ class App extends Component {
     this.tokens = [];
     this.state = {
       title: datas.title,
+      description: datas.description,
       steps: datas.steps,
       current: null,
       left: false
@@ -41,6 +42,8 @@ class App extends Component {
   renderTimeline() {
     return (
       <Timeline
+        title={this.state.title}
+        description={this.state.description}
         steps={this.state.steps}
         current={this.state.current}
         onClick={this.handleClick}
@@ -74,8 +77,8 @@ class App extends Component {
         bgColor={theme.palette.primary.main}
         spinnerColor={theme.palette.primary.contrastText}
         textColor={theme.palette.primary.contrastText}
-        logoSrc="./loader.gif"
-        text="Patience ! Ça charge, mon p'tit pote :) :) :)"
+        logoSrc={datas.loadingPage.img}
+        text={datas.loadingPage.text}
       >
         <MuiThemeProvider theme={theme}>
           <div className="body">

@@ -1,5 +1,6 @@
 {
   "title": "Trip to New Zealand",
+  "description": "Site ayant pour but de répértorier mes photos durant mon voyage en Nouvelle-Zélande",
   "steps": [
     {
       "order": 1,
@@ -688,5 +689,9 @@
         }
       ]
     }
-  ]
+  ],
+  "loadingPage": {
+    "text": "Patience ! Ça charge, mon p'tit pote :) :) :)",
+    "img": "./loader.gif"
+  }
 }

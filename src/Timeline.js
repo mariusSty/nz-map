@@ -34,11 +34,10 @@ function Timeline(props) {
       <div>
         <Typography variant="h5">
           <MapIcon className="title" />
-          <b>Trip to New Zealand</b>
+          <b>{props.title}</b>
         </Typography>
         <Typography className="description" variant="body1">
-          Site ayant pour but de répértorier mes photos durant mon voyage en
-          Nouvelle-Zélande
+          {props.description}
         </Typography>
         <List className="list">{steps}</List>
       </div>
