@@ -28,6 +28,7 @@ class App extends Component {
       left: false
     };
     this.state.center = this.findCenter();
+    this.loading = true;
     for (let i = 0; i < this.state.steps.length; i++) {
       this.tokens[i] = [];
       for (let j = 0; j < this.state.steps[i].img.length; j++) {
@@ -67,10 +68,10 @@ class App extends Component {
   }
 
   render() {
-    const loading = this.checkImageLoaded();
+    console.log("render");
     return (
       <LoadingScreen
-        loading={loading}
+        loading={this.loading}
         bgColor={theme.palette.primary.main}
         spinnerColor={theme.palette.primary.contrastText}
         textColor={theme.palette.primary.contrastText}
@@ -150,6 +151,7 @@ class App extends Component {
   getImgSize(step, img) {
     let newImg = new Image();
     newImg.onload = () => {
+      console.log("onLoad");
       let height = newImg.height;
       let width = newImg.width;
       let thumbnailHeight = 180;
@@ -163,8 +165,12 @@ class App extends Component {
       dimensions[step].img[img].thumbnailHeight = thumbnailHeight;
 
       this.tokens[step][img] = true;
-
-      this.setState({ steps: dimensions });
+      let allLoading = this.checkImageLoaded();
+      if (allLoading) {
+        console.log("all image load");
+        this.loading = false;
+        this.setState({ steps: dimensions });
+      }
     };
     newImg.src = this.state.steps[step].img[img].src;
   }
@@ -173,12 +179,12 @@ class App extends Component {
     for (let i = 0; i < this.state.steps.length; i++) {
       for (let j = 0; j < this.state.steps[i].img.length; j++) {
         if (this.tokens[i][j] === false) {
-          return true;
+          return false;
         }
       }
     }
 
-    return false;
+    return true;
   }
 
   toggleDrawer = open => () => {
