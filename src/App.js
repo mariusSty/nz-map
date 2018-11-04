@@ -68,7 +68,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("render");
     return (
       <LoadingScreen
         loading={this.loading}
@@ -151,7 +150,6 @@ class App extends Component {
   getImgSize(step, img) {
     let newImg = new Image();
     newImg.onload = () => {
-      console.log("onLoad");
       let height = newImg.height;
       let width = newImg.width;
       let thumbnailHeight = 180;
@@ -167,7 +165,6 @@ class App extends Component {
       this.tokens[step][img] = true;
       let allLoading = this.checkImageLoaded();
       if (allLoading) {
-        console.log("all image load");
         this.loading = false;
         this.setState({ steps: dimensions });
       }
