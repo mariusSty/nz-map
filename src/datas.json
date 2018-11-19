@@ -688,6 +688,63 @@
           "thumbnailWidth": []
         }
       ]
+    },
+    {
+      "order": 8,
+      "name": "Dargaville",
+      "longitude": -35.9401291,
+      "latitude": 173.8691427,
+      "dates": ["02/11/2018", "???"],
+      "img": [
+        {
+          "src": "./img/Dargaville/IMG_0821.JPG",
+          "caption": "Baylis Beach (1/2)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        },
+        {
+          "src": "./img/Dargaville/IMG_0822.JPG",
+          "caption": "Baylis Beach (2/2)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        },
+        {
+          "src": "./img/Dargaville/IMG_0872.JPG",
+          "caption": "Job in the Kumara potatoes (1/4)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        },
+        {
+          "src": "./img/Dargaville/IMG_0874.JPG",
+          "caption": "Job in the Kumara potatoes (2/4)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        },
+        {
+          "src": "./img/Dargaville/IMG_0878.JPG",
+          "caption": "Job in the Kumara potatoes (3/4)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        },
+        {
+          "src": "./img/Dargaville/IMG_0882.JPG",
+          "caption": "Job in the Kumara potatoes (4/4)",
+          "imgHeight": [],
+          "imgWidth": [],
+          "thumbnailHeight": [],
+          "thumbnailWidth": []
+        }
+      ]
     }
   ],
   "loadingPage": {
