@@ -15,8 +15,6 @@ import { Hidden } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
-import LoadingScreen from "react-loading-screen";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -65,50 +63,41 @@ class App extends Component {
 
   render() {
     return (
-      <LoadingScreen
-        loading={this.loading}
-        bgColor={theme.palette.primary.main}
-        spinnerColor={theme.palette.primary.contrastText}
-        textColor={theme.palette.primary.contrastText}
-        logoSrc={datas.loadingPage.img}
-        text={datas.loadingPage.text}
-      >
-        <MuiThemeProvider theme={theme}>
-          <div className="body">
-            <Hidden mdUp>
-              <TopBar
-                title={this.state.title}
-                onClick={this.toggleDrawer(true)}
-              />
-            </Hidden>
-            <Hidden smDown>
-              <Grid
-                className="timeline"
-                style={{ backgroundColor: theme.palette.primary.main }}
-                item
-                xs={3}
-              >
-                {this.renderTimeline()}
-              </Grid>
-            </Hidden>
-            <Grid container justify="flex-end">
-              <Grid item xs={12} md={9}>
-                {this.renderContainer()}
-              </Grid>
+      <MuiThemeProvider theme={theme}>
+        <div className="body">
+          <Hidden mdUp>
+            <TopBar
+              title={this.state.title}
+              onClick={this.toggleDrawer(true)}
+            />
+          </Hidden>
+          <Hidden smDown>
+            <Grid
+              className="timeline"
+              style={{ backgroundColor: theme.palette.primary.main }}
+              item
+              xs={3}
+            >
+              {this.renderTimeline()}
             </Grid>
-            <Drawer open={this.state.left} onClose={this.toggleDrawer(false)}>
-              <div
-                tabIndex={0}
-                role="button"
-                onClick={this.toggleDrawer(false)}
-                onKeyDown={this.toggleDrawer(false)}
-              >
-                <SideList steps={this.state.steps} onClick={this.handleClick} />
-              </div>
-            </Drawer>
-          </div>
-        </MuiThemeProvider>
-      </LoadingScreen>
+          </Hidden>
+          <Grid container justify="flex-end">
+            <Grid item xs={12} md={9}>
+              {this.renderContainer()}
+            </Grid>
+          </Grid>
+          <Drawer open={this.state.left} onClose={this.toggleDrawer(false)}>
+            <div
+              tabIndex={0}
+              role="button"
+              onClick={this.toggleDrawer(false)}
+              onKeyDown={this.toggleDrawer(false)}
+            >
+              <SideList steps={this.state.steps} onClick={this.handleClick} />
+            </div>
+          </Drawer>
+        </div>
+      </MuiThemeProvider>
     );
   }
 
