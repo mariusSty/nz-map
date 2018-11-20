@@ -13,7 +13,7 @@ function TopBar(props) {
         <IconButton aria-label="Menu" onClick={() => props.onClick()}>
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6">
+        <Typography className="topbar-text" variant="h6">
           <MapIcon className="title" />
           {props.title}
         </Typography>

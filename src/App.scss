@@ -83,6 +83,7 @@
       .button-return {
         background-color: #f44336;
         color: white;
+        margin-top: 10px;
       }
     }
 
@@ -97,5 +98,11 @@
     display: inline-flex;
     vertical-align: middle;
     margin-right: 5px;
+  }
+
+  @media screen and (max-width: 370px) {
+    .topbar-text {
+      font-size: 0.8rem;
+    }
   }
 }
