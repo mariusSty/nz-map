@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
 import Grid from "@material-ui/core/Grid";
-import { Hidden, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import CalendarIcon from "@material-ui/icons/CalendarToday";
 import ClearIcon from "@material-ui/icons/Clear";
@@ -54,28 +54,16 @@ function Slider(props) {
                 {listDate}
               </Typography>
             </Grid>
-            <Hidden smDown>
-              <Grid item>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  onClick={() => props.onClick()}
-                >
-                  <ClearIcon />
-                </Button>
-              </Grid>
-            </Hidden>
+            <Grid item>
+              <Button
+                variant="contained"
+                className="button-return"
+                onClick={() => props.onClick()}
+              >
+                <ClearIcon />
+              </Button>
+            </Grid>
           </Grid>
-          <Hidden mdUp>
-            <Button
-              className="button-fixed"
-              variant="fab"
-              color="primary"
-              onClick={() => props.onClick()}
-            >
-              <ClearIcon />
-            </Button>
-          </Hidden>
         </div>
         <Gallery
           images={IMAGES}

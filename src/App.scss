@@ -76,11 +76,9 @@
         }
       }
 
-      .button-fixed {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1;
+      .button-return {
+        background-color: #f44336;
+        color: white;
       }
     }
 
