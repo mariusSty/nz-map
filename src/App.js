@@ -29,14 +29,7 @@ class App extends Component {
       left: false
     };
     this.state.center = this.findCenter();
-    this.loading = true;
-    for (let i = 0; i < this.state.steps.length; i++) {
-      this.tokens[i] = [];
-      for (let j = 0; j < this.state.steps[i].img.length; j++) {
-        this.tokens[i][j] = false;
-        this.getImgSize(i, j);
-      }
-    }
+    this.loading = false;
   }
 
   renderTimeline() {
@@ -148,43 +141,6 @@ class App extends Component {
     const midLongitude = (minLongitude + maxLongitude) / 2;
 
     return [midLatitude, midLongitude];
-  }
-
-  getImgSize(step, img) {
-    let newImg = new Image();
-    newImg.onload = () => {
-      let height = newImg.height;
-      let width = newImg.width;
-      let thumbnailHeight = 180;
-      let thumbnailWidth = (thumbnailHeight * width) / height;
-
-      let dimensions = this.state.steps.slice();
-
-      dimensions[step].img[img].imgWidth = width;
-      dimensions[step].img[img].imgHeight = height;
-      dimensions[step].img[img].thumbnailWidth = thumbnailWidth;
-      dimensions[step].img[img].thumbnailHeight = thumbnailHeight;
-
-      this.tokens[step][img] = true;
-      let allLoading = this.checkImageLoaded();
-      if (allLoading) {
-        this.loading = false;
-        this.setState({ steps: dimensions });
-      }
-    };
-    newImg.src = this.state.steps[step].img[img].src;
-  }
-
-  checkImageLoaded() {
-    for (let i = 0; i < this.state.steps.length; i++) {
-      for (let j = 0; j < this.state.steps[i].img.length; j++) {
-        if (this.tokens[i][j] === false) {
-          return false;
-        }
-      }
-    }
-
-    return true;
   }
 
   toggleDrawer = open => () => {

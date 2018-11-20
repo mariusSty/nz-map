@@ -13,7 +13,7 @@ function Slider(props) {
     let image = {
       src: props.current.img[i].src,
       thumbnail: props.current.img[i].src,
-      thumbnailHeight: props.current.img[i].thumbnailHeight,
+      thumbnailHeight: 180,
       thumbnailWidth: props.current.img[i].thumbnailWidth,
       caption: props.current.img[i].caption,
       customOverlay: <div className="overlay" />

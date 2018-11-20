@@ -12,90 +12,57 @@
         {
           "src": "./img/Auckland/IMG_0543.JPG",
           "caption": "Silverfern Backpackers (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0544.JPG",
           "caption": "Silverfern Backpackers (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0545.JPG",
           "caption": "Mount Eden (1/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0547.JPG",
           "caption": "Mount Eden (2/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0548.JPG",
           "caption": "Mount Eden (3/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0549.JPG",
           "caption": "Mount Eden (4/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0550.JPG",
           "caption": "Mount Eden (5/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0552.JPG",
           "caption": "Bruce Lee Sushi (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 519.5982783357246
         },
         {
           "src": "./img/Auckland/IMG_0553.JPG",
           "caption": "Bruce Lee Sushi (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 320
         },
         {
           "src": "./img/Auckland/IMG_0554.JPG",
           "caption": "Auckland War Memorial Museum (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Auckland/IMG_0555.JPG",
           "caption": "Auckland War Memorial Museum (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         }
       ]
     },
@@ -109,98 +76,62 @@
         {
           "src": "./img/Whangarei/IMG_0561.JPG",
           "caption": "The Cell Block Backpackers (1/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0562.JPG",
           "caption": "The Cell Block Backpackers (2/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0563.JPG",
           "caption": "The Cell Block Backpackers (3/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Whangarei/IMG_0567.JPG",
           "caption": "Abbey Caves",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0579.JPG",
           "caption": "Skatepark Whangarei (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0581.JPG",
           "caption": "Skatepark Whangarei (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Whangarei/IMG_0582.JPG",
           "caption": "Mair Park (1/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0584.JPG",
           "caption": "Mair Park (2/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0585.JPG",
           "caption": "Mair Park (3/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Whangarei/IMG_0589.JPG",
           "caption": "Mair Park (4/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Whangarei/IMG_0595.JPG",
           "caption": "Mair Park (5/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Whangarei/IMG_0596.jpg",
           "caption": "Mair Park (6/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 319.80916030534354
         }
       ]
     },
@@ -214,66 +145,42 @@
         {
           "src": "./img/Paihia/IMG_0611.JPG",
           "caption": "Hundertwasser Toilets",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Paihia/IMG_0618.JPG",
           "caption": "Bay Adventurer Backpackers",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Paihia/IMG_0619.JPG",
           "caption": "Paihia Beach (1/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Paihia/IMG_0624.JPG",
           "caption": "Paihia Beach (2/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Paihia/IMG_0625.JPG",
           "caption": "Paihia Beach (3/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Paihia/IMG_0626.JPG",
           "caption": "St Pauls Anglican Church",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Paihia/IMG_0652.JPG",
           "caption": "Paihia City (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Paihia/IMG_0654.JPG",
           "caption": "Paihia City (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         }
       ]
     },
@@ -287,154 +194,97 @@
         {
           "src": "./img/Kaeo/IMG_0666.JPG",
           "caption": "Farm - HelpX (1/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0667.JPG",
           "caption": "Farm - HelpX (2/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0668.JPG",
           "caption": "Farm - HelpX (3/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0672.JPG",
           "caption": "Farm - HelpX (4/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 319.5
         },
         {
           "src": "./img/Kaeo/IMG_0675.JPG",
           "caption": "Farm - HelpX (5/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0676.JPG",
           "caption": "Farm - HelpX (6/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0677.JPG",
           "caption": "Farm - HelpX (7/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0678.JPG",
           "caption": "Farm - HelpX (8/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0681.JPG",
           "caption": "Farm - HelpX (9/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0682.JPG",
           "caption": "Farm - HelpX (10/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0683.JPG",
           "caption": "Farm - HelpX (11/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0684.JPG",
           "caption": "Farm - HelpX (12/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0685.JPG",
           "caption": "Farm - HelpX (13/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0687.JPG",
           "caption": "Whangaroa Harbour (1/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 546.4721208963001
         },
         {
           "src": "./img/Kaeo/IMG_0689.JPG",
           "caption": "Whangaroa Harbour (2/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0690.JPG",
           "caption": "Whangaroa Harbour (3/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0692.JPG",
           "caption": "Whangaroa Harbour (4/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Kaeo/IMG_0695.JPG",
           "caption": "Whangaroa Harbour (5/5)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Kaeo/IMG_0720.JPG",
           "caption": "Hitchhiking",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         }
       ]
     },
@@ -448,58 +298,37 @@
         {
           "src": "./img/Ahipara/IMG_0721.JPG",
           "caption": "Ahipara Beach (1/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0723.JPG",
           "caption": "Ahipara Beach (2/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0724.JPG",
           "caption": "Ahipara Beach (3/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0725.JPG",
           "caption": "Ahipara Beach (4/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0726.JPG",
           "caption": "Ahipara Beach (5/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0729.JPG",
           "caption": "Ahipara Beach (6/6)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Ahipara/IMG_0735.JPG",
           "caption": "Wairoa Stream",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         }
       ]
     },
@@ -513,58 +342,37 @@
         {
           "src": "./img/Cape Reinga/IMG_0736.JPG",
           "caption": "Lighthouse (1/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Cape Reinga/IMG_0737.JPG",
           "caption": "Lighthouse (2/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Cape Reinga/IMG_0738.JPG",
           "caption": "Lighthouse (3/3)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Cape Reinga/IMG_0739.JPG",
           "caption": "Cape Reinga (1/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Cape Reinga/IMG_0742.JPG",
           "caption": "Cape Reinga (2/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Cape Reinga/IMG_0749.JPG",
           "caption": "Cape Reinga (3/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Cape Reinga/IMG_0751.JPG",
           "caption": "Cape Reinga (4/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         }
       ]
     },
@@ -578,114 +386,72 @@
         {
           "src": "./img/Omapere/IMG_0760.JPG",
           "caption": "Hokianga Harbour (1/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0763.JPG",
           "caption": "Hokianga Harbour (2/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0775.JPG",
           "caption": "Globetrekkers Lodge",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 423.7085230969421
         },
         {
           "src": "./img/Omapere/IMG_0783.JPG",
           "caption": "Hokianga Harbour (3/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 335.0558375634518
         },
         {
           "src": "./img/Omapere/IMG_0785.JPG",
           "caption": "Hokianga Harbour (4/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0786.JPG",
           "caption": "Hokianga Harbour (5/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 488.22303282959876
         },
         {
           "src": "./img/Omapere/IMG_0787.JPG",
           "caption": "Hokianga Harbour (6/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         },
         {
           "src": "./img/Omapere/IMG_0791.JPG",
           "caption": "Hokianga Harbour (7/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 781.9446081319976
         },
         {
           "src": "./img/Omapere/IMG_0793.JPG",
           "caption": "Hokianga Harbour (8/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 778.1626187961986
         },
         {
           "src": "./img/Omapere/IMG_0796.JPG",
           "caption": "Hokianga Harbour (9/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0797.JPG",
           "caption": "Hokianga Harbour (10/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0798.JPG",
           "caption": "Hokianga Harbour (11/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0801.JPG",
           "caption": "Hokianga Harbour (12/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Omapere/IMG_0802.JPG",
           "caption": "Hokianga Harbour (13/13)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         }
       ]
     },
@@ -699,50 +465,32 @@
         {
           "src": "./img/Dargaville/IMG_0821.JPG",
           "caption": "Baylis Beach (1/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Dargaville/IMG_0822.JPG",
           "caption": "Baylis Beach (2/2)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Dargaville/IMG_0872.JPG",
           "caption": "Job in the Kumara potatoes (1/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Dargaville/IMG_0874.JPG",
           "caption": "Job in the Kumara potatoes (2/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Dargaville/IMG_0878.JPG",
           "caption": "Job in the Kumara potatoes (3/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 240
         },
         {
           "src": "./img/Dargaville/IMG_0882.JPG",
           "caption": "Job in the Kumara potatoes (4/4)",
-          "imgHeight": [],
-          "imgWidth": [],
-          "thumbnailHeight": [],
-          "thumbnailWidth": []
+          "thumbnailWidth": 135
         }
       ]
     }
